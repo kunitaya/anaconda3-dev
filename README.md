@@ -1,5 +1,5 @@
 # anaconda3-dev
-The Anaconda3(python) environment which is made by Docker-Compose
+The Anaconda3(python) dev-environment which is made by Docker-Compose
 
 ### Prerequisite package
 * Docker & Docker Compose

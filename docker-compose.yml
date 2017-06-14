@@ -15,7 +15,7 @@ services:
       - ./dbdata:/var/lib/mysql
 
   app:
-    image: kunitaya/anaconda3
+    build: .
     depends_on:
       - db
     volumes:

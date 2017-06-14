@@ -1,0 +1,23 @@
+version: '2'
+services:
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password!
+      MYSQL_DATABASE: anaconda3
+      MYSQL_USER: anaconda
+      MYSQL_PASSWORD: anaconda
+      MYSQL_HOST: ""
+    ports:
+      - "13306:3306"
+    volumes:
+      - ./dbdata:/var/lib/mysql
+
+  app:
+    image: kunitaya/anaconda3
+    depends_on:
+      - db
+    volumes:
+      - ./applications:/usr/local/share/applications
+    command: [/sbin/init]
